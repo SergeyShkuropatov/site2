@@ -1776,11 +1776,6 @@ _:-ms-fullscreen, :root .cost .common-price  {
   z-index: 99999;
 }
 
-.question .popup {
-  /* Firefox 19+ */
-  /* Firefox 18- */
-}
-
 .question .popup ::-webkit-input-placeholder {
   color: #000000;
 }
@@ -2093,6 +2088,9 @@ footer form {
 
 
 footer input {
+  opacity: 0;
+  position: relative;
+  top: 150px;
   padding: 2% 3%;
   background-color: #ffffff;
   width: 94%;
@@ -2106,6 +2104,9 @@ footer input {
 }
 
 footer textarea {
+  opacity: 0;
+  position: relative;
+  top: 200px;
   padding: 2% 3%;
   background-color: #ffffff;
   margin: 2% 0;
@@ -2160,7 +2161,7 @@ footer form button {
   }
 }
 
-footer .button_social_animation {
+.button_social_animation {
   -webkit-animation: button_social 1.5s 1;
           animation: button_social 1.5s 1;
   -webkit-animation-fill-mode: forwards;
@@ -2184,7 +2185,9 @@ footer .social ul {
   list-style-type: none;
   text-decoration: none;
 }
-
+footer .social ul li{
+  opacity: 0;
+}
 footer .social ul li a {
   text-decoration: none;
 }

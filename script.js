@@ -340,16 +340,18 @@ let container=document.querySelector('.cost .container');
 // анимация на событие footer
 let footer_container=document.querySelector('footer');
 let button_social=document.querySelectorAll('.social ul li');
+// let button_social=$('.social ul li');
 var coordinates = $('.coordinates');
+console.log($('.social ul li'));
     function button_social_animation(){
         let centerHeight = window.innerHeight / 2;
             if(footer_container.getBoundingClientRect().top <= centerHeight
                 && footer_container.getBoundingClientRect().bottom > centerHeight
             ){ 
-                $('.button_social').each(function(cardItem, index){
-                    console.log(cardItem);
+
+                button_social.forEach(function(cardItem, index){
                     cardItem.classList.add('button_social_animation');
-                    // cardItem.style.animationDelay = `${index}s`;
+                    cardItem.style.animationDelay = `${index}s`;
                 });
                 coordinates.animate({
                     left: 0 + 'px',
@@ -358,13 +360,13 @@ var coordinates = $('.coordinates');
                 $('footer form').find("[name='name']").animate({
                     top: 0,
                     opacity: 1
-                }, 300);
+                }, 700);
                 $('footer form').find("[name='email']").animate({
-                    top: 15 + 'px',
+                    top: 5 + 'px',
                     opacity: 1
                 }, 1000);
                 $('footer form').find("[name='text_contacts']").animate({
-                    top: 30 + 'px',
+                    top: 15 + 'px',
                     opacity: 1
                 }, 1700);
                 $('footer button').animate({
