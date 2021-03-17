@@ -1,10 +1,8 @@
 $(document).ready(function () {
-console.log("aaaa");
     // //анимация на событие load класса imageHeader
     let logo = $('.logo');
     let forma = $('.forma');
     let imageHeader = document.querySelector('.imageHeader');
-    // console.log(imageHeader);
     let h1 = $('h1');
     let p = $('p');
     let link1 = $('.link1');
@@ -340,26 +338,19 @@ let container=document.querySelector('.cost .container');
     });
      
 // анимация на событие footer
-console.log("button_social");
 let footer_container=document.querySelector('footer');
 let button_social=document.querySelectorAll('.social ul li');
 var coordinates = $('.coordinates');
-console.log(button_social);
-    function button_social_animation(){console.log(button_social);
+    function button_social_animation(){
         let centerHeight = window.innerHeight / 2;
-        $('.button_social').each(function(cardItem, index){
-            console.log($('.button_social'));
-            cardItem.classList.add('button_social_animation');
-            // cardItem.style.animationDelay = `${index}s`;
-        });
             if(footer_container.getBoundingClientRect().top <= centerHeight
                 && footer_container.getBoundingClientRect().bottom > centerHeight
             ){ 
-                // $('.button_social').each(function(cardItem, index){
-                //     console.log(cardItem);
-                //     cardItem.classList.add('button_social_animation');
-                //     // cardItem.style.animationDelay = `${index}s`;
-                // });
+                $('.button_social').each(function(cardItem, index){
+                    console.log(cardItem);
+                    cardItem.classList.add('button_social_animation');
+                    // cardItem.style.animationDelay = `${index}s`;
+                });
                 coordinates.animate({
                     left: 0 + 'px',
                     opacity: 1
